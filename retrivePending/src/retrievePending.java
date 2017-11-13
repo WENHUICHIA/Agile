@@ -1,9 +1,13 @@
+
+import java.awt.Color;
+
+
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author Mei Huey
@@ -15,6 +19,7 @@ public class retrievePending extends javax.swing.JFrame {
      */
     public retrievePending() {
         initComponents();
+        this.getContentPane().setBackground(Color.white);
     }
 
     /**
@@ -34,6 +39,7 @@ public class retrievePending extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Retrieve Pending");
 
         jComboBoxName.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Johnson", "Jackson", "Thomas", "Williams" }));
 
@@ -57,31 +63,31 @@ public class retrievePending extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(61, 61, 61)
+                .addGap(20, 20, 20)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 703, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabelName)
-                        .addGap(18, 18, 18)
+                        .addGap(6, 6, 6)
                         .addComponent(jComboBoxName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(81, 81, 81)
-                        .addComponent(jButtonCheck)))
-                .addContainerGap(48, Short.MAX_VALUE))
+                        .addGap(40, 40, 40)
+                        .addComponent(jButtonCheck))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 703, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(42, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(51, 51, 51)
+                .addGap(30, 30, 30)
                 .addComponent(jLabel1)
-                .addGap(27, 27, 27)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGap(30, 30, 30)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabelName)
                     .addComponent(jComboBoxName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonCheck)
-                    .addComponent(jLabelName))
-                .addGap(59, 59, 59)
+                    .addComponent(jButtonCheck))
+                .addGap(28, 28, 28)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(170, Short.MAX_VALUE))
+                .addContainerGap(70, Short.MAX_VALUE))
         );
 
         pack();
@@ -91,26 +97,25 @@ public class retrievePending extends javax.swing.JFrame {
         String name;
         name = jComboBoxName.getSelectedItem().toString();
         
-        if (name == "Johnson"){
+        if (name == "Johnson") {
             jTextAreaResult.setText("Name:             Address:                                                         ContactNumber:              Order:\n"
-            + "Mary               40,Jalan Bagus,Taman OUG,52000 KL       0125430987                  Fried Chicken (2 boxes)\n"
-            + "Sam               59,Jalan Radin,Taman Bagus,57800 KL     0125439530                  Fried Rice (2 packets)\n");
+                    + "Mary               40,Jalan Bagus,Taman OUG,52000 KL       0125430987                  Fried Chicken (2 boxes)\n"
+                    + "Sam               59,Jalan Radin,Taman Bagus,57800 KL     0125439530                  Fried Rice (2 packets)\n");
             //jTextAreaResult.setText("Sam               59,Jalan Radin,Taman Bagus,57800 KL     0125439530                  Fried Rice (2 packets)");
-        }else if(name == "Jackson"){
+        } else if (name == "Jackson") {
             jTextAreaResult.setText("Name:             Address:                                                                 ContactNumber:              Order:\n"
-            + "James             39,Jalan Indah,Taman Setapak,56000 KL       0120853987                  Chicken Rice (3 packets)\n");
-        }else if(name == "Thomas"){
+                    + "James             39,Jalan Indah,Taman Setapak,56000 KL       0120853987                  Chicken Rice (3 packets)\n");
+        } else if (name == "Thomas") {
             jTextAreaResult.setText("Name:             Address:                                                              ContactNumber:              Order:\n"
-            + "Wilson            20,Jalan Bunga,Taman Bagus,51000 KL     0125492549                  Pizza (2 boxes)\n"
-            + "Taylor              19,Jalan Bunga,Taman Bagus,51000 KL     0125405123                  KFC (4 boxes)\n"
-            + "James            90,Jalan Gembira,Taman Bukit,50800 KL    0168905123                  Fried Chicken (4 boxes)\n");
-        }else if(name == "Williams"){
+                    + "Wilson            20,Jalan Bunga,Taman Bagus,51000 KL     0125492549                  Pizza (2 boxes)\n"
+                    + "Taylor              19,Jalan Bunga,Taman Bagus,51000 KL     0125405123                  KFC (4 boxes)\n"
+                    + "James            90,Jalan Gembira,Taman Bukit,50800 KL    0168905123                  Fried Chicken (4 boxes)\n");
+        } else if (name == "Williams") {
             jTextAreaResult.setText("Name:             Address:                                                                 ContactNumber:              Order:\n"
-            + "Smith             49,Jalan Indah,Taman Setapak,56000 KL       0120026518                  Pizza (3 boxes)\n");
+                    + "Smith             49,Jalan Indah,Taman Setapak,56000 KL       0120026518                  Pizza (3 boxes)\n");
         }
     }//GEN-LAST:event_jButtonCheckActionPerformed
 
-    
     /**
      * @param args the command line arguments
      */
