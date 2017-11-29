@@ -12,7 +12,6 @@ import java.io.Serializable;
  * @author Mei Huey
  */
 public class DeliveryMan implements Serializable{
-    public static int nextID = 100;
     public String name;
     public int age;
     public String phoneNo;
@@ -25,14 +24,6 @@ public class DeliveryMan implements Serializable{
         this.address = address;
     }
     
-    public static int getNextID() {
-        return nextID;
-    }
-
-    public static void setNextID(int nextID) {
-        DeliveryMan.nextID = nextID;
-    }
-
     public String getName() {
         return name;
     }
